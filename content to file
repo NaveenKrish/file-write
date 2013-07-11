@@ -1,0 +1,21 @@
+import java.io.*;
+
+class FileRead {
+public static void main(String args[]) {
+  
+   try {
+     
+     String text="copy this to that folder";
+     File file=new File("F:/navn.txt");
+
+     FileWriter fw=new FileWriter(file.getAbsoluteFile());
+     BufferedWriter bufwrit=new BufferedWriter(fw);
+     bufwrit.write(text);
+     bufwrit.close();
+   }
+ 
+   catch (IOException e) {
+     e.printStackTrace();
+   }
+ }
+}
